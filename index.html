@@ -53,30 +53,31 @@
             animation: fadeUp 1.5s ease;
         }
 
-        /* 英文副标题 */
+        /* 英文副标题 —— 这里帮你缩小了字号，显得更精致不抢戏 */
         .sub-title {
             font-family: 'Great Vibes', cursive; /* 使用引入的英文花体 */
-            font-size: 32px; /* 花体字普遍偏小，所以调大字号更清晰 */
+            font-size: 22px; /* ★ 从 32px 缩小到了 22px */
             color: #b28a97;
             margin-bottom: 60px;
             letter-spacing: 1px;
             animation: fadeUp 2s ease;
         }
 
-        /* 双人介绍卡容器 */
+        /* 双人介绍卡容器 —— 优化了并排逻辑 */
         .card-container {
             width: 100%;
-            max-width: 1000px;
+            max-width: 800px; /* 稍微缩窄最大宽度，让两个人靠得更近更亲密 */
             display: flex;
-            gap: 40px;
+            gap: 30px;
             justify-content: center;
-            flex-wrap: wrap;
+            align-items: stretch; /* ★ 让两张卡片的高度永远保持绝对一致 */
             padding: 10px;
         }
 
         /* 卡片升级：增加淡淡的粉色半透明呼吸感 */
         .profile-card {
-            width: 320px;
+            flex: 1; /* ★ 核心修改：让两张卡片平分宽度，在电脑上死死并排 */
+            max-width: 360px; /* 限制单张卡片最大宽度 */
             background: rgba(255, 255, 255, 0.65);
             border: 1px solid rgba(245, 220, 228, 0.7);
             border-radius: 24px;
@@ -199,11 +200,14 @@
             }
 
             .sub-title {
-                font-size: 26px;
+                font-size: 18px; /* 手机端副标题也等比例缩小 */
                 margin-bottom: 45px;
             }
 
+            /* 手机端恢复成上下排列，防止卡片太挤 */
             .card-container {
+                flex-direction: column;
+                align-items: center;
                 gap: 25px;
             }
 
@@ -259,9 +263,9 @@
                 <div class="name">相泽消太</div>
                 <div class="eng-name">Aizawa Shouta</div>
                 <div class="description">
-                    这里写老师的介绍。<br>
-                    你以后可以自己修改文字。<br>
-                    也可以上传自己的图片替换。
+                    相泽消太。雄英英雄科教师，前职业英雄，前1-A班班导<br>
+                    勾引学生的坏蛋老师。
+                                        
                 </div>
             </div>
 
@@ -271,9 +275,10 @@
                 <div class="name">栗川千夏</div>
                 <div class="eng-name">Kurikawa Chinatsu</div>
                 <div class="description">
-                    这里写你的介绍。<br>
-                    比如喜欢的东西、性格、故事等等。<br>
-                    完全可以以后慢慢补充。
+                    栗川千夏，职业英雄，前雄英1-A学生。<br>
+        
+                    被坏蛋老师勾引了。<br>
+                    
                 </div>
             </div>
 
@@ -283,8 +288,8 @@
         <section class="guide">
             <div class="guide-title">导览</div>
             <div class="guide-buttons">
-                <a href="Photo.html">私有影像存档^ω^</a>
-                <a href="story.html">UA问题生观察日志-_-</a>
+                <a href="Photo.html">私有影像存档^ᵕ^</a>
+                <a href="story.html">UA问题生观察日志TuT</a>
                 <a href="daily.html">24小时合理性怠情=⩌⩊⩌=</a>
             </div>
         </section>
@@ -293,3 +298,5 @@
 
 </body>
 </html>
+
+        
