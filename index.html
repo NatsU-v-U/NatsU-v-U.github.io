@@ -1,69 +1,394 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh">
 
 <head>
 <meta charset="UTF-8">
-<title>栗川千夏</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>和老师的小世界</title>
 
 <style>
 
-body{
+*{
     margin:0;
-    background:#000;
-    color:white;
-    font-family:sans-serif;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    background:
+    linear-gradient(
+    to bottom,
+    #fff7fa 0%,
+    #ffeef5 40%,
+    #fff9fb 100%
+    );
+
+    color:#5e4b52;
+
+    font-family:
+    "Songti SC",
+    "SimSun",
+    serif;
+
+    overflow-x:hidden;
+}
+
+
+/* 顶部区域 */
+
+.hero{
+
+    min-height:100vh;
+
     display:flex;
+    flex-direction:column;
+
     justify-content:center;
     align-items:center;
-    height:100vh;
-    flex-direction:column;
+
+    text-align:center;
+
+    padding:40px;
 }
 
-h1{
-    font-size:42px;
-    margin-bottom:10px;
-    letter-spacing:2px;
+
+/* 主标题 */
+
+.main-title{
+
+    font-size:48px;
+
+    letter-spacing:3px;
+
+    margin-bottom:18px;
+
+    color:#7d5a66;
+
+    animation:fadeUp 1.5s ease;
 }
 
-p{
-    opacity:0.6;
-    margin-bottom:40px;
+
+/* 英文副标题 */
+
+.sub-title{
+
+    font-size:20px;
+
+    font-style:italic;
+
+    color:#b28a97;
+
+    margin-bottom:60px;
+
+    letter-spacing:1px;
+
+    animation:fadeUp 2s ease;
 }
 
-.buttons{
+
+/* 双人介绍卡 */
+
+.card-container{
+
+    width:100%;
+
+    max-width:1000px;
+
     display:flex;
-    gap:15px;
-    flex-wrap:wrap;
+
+    gap:40px;
+
     justify-content:center;
+
+    flex-wrap:wrap;
 }
 
-a{
-    color:white;
+
+/* 卡片 */
+
+.profile-card{
+
+    width:320px;
+
+    background:rgba(255,255,255,0.55);
+
+    border:1px solid rgba(255,255,255,0.8);
+
+    border-radius:30px;
+
+    padding:30px;
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,0.06);
+
+    transition:0.4s;
+}
+
+.profile-card:hover{
+
+    transform:translateY(-8px);
+}
+
+
+/* 头像 */
+
+.avatar{
+
+    width:180px;
+    height:180px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    margin-bottom:25px;
+
+    border:5px solid rgba(255,255,255,0.8);
+}
+
+
+/* 名字 */
+
+.name{
+
+    font-size:34px;
+
+    margin-bottom:10px;
+
+    color:#6d515c;
+}
+
+
+/* 英文名 */
+
+.eng-name{
+
+    font-style:italic;
+
+    color:#b78d9b;
+
+    margin-bottom:25px;
+}
+
+
+/* 介绍 */
+
+.description{
+
+    line-height:2;
+
+    font-size:15px;
+
+    opacity:0.85;
+}
+
+
+/* 导览 */
+
+.guide{
+
+    margin-top:100px;
+
+    text-align:center;
+
+    padding-bottom:120px;
+}
+
+
+.guide-title{
+
+    font-size:36px;
+
+    margin-bottom:40px;
+
+    color:#7d5a66;
+}
+
+
+/* 导览按钮 */
+
+.guide-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:18px;
+}
+
+
+.guide-buttons a{
+
     text-decoration:none;
-    border:1px solid white;
-    padding:12px 28px;
+
+    color:#7d5a66;
+
+    background:white;
+
+    padding:14px 30px;
+
+    border-radius:999px;
+
     transition:0.3s;
+
+    box-shadow:
+    0 5px 15px rgba(0,0,0,0.05);
 }
 
-a:hover{
-    background:white;
-    color:black;
+
+.guide-buttons a:hover{
+
+    background:#f5dbe4;
+
+    transform:translateY(-3px);
+}
+
+
+/* 动画 */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+
+/* 手机适配 */
+
+@media(max-width:768px){
+
+    .main-title{
+
+        font-size:36px;
+    }
+
+    .profile-card{
+
+        width:90%;
+    }
 }
 
 </style>
 </head>
 
+
 <body>
 
-<h1>欢迎来到我的档案馆</h1>
+<section class="hero">
 
-<p>一些故事、记忆与私人世界。</p>
+<h1 class="main-title">
+- 欢迎来到和老师的小世界 -
+</h1>
 
-<div class="buttons">
-<a href="oc.html">OC</a>
-<a href="story.html">小说</a>
-<a href="gallery.html">图片</a>
+<div class="sub-title">
+Aizawa with Kurikawa :)
 </div>
+
+
+<!-- 双人介绍 -->
+
+<div class="card-container">
+
+<!-- 老师 -->
+
+<div class="profile-card">
+
+<img class="avatar"
+src="aizawa.jpg">
+
+<div class="name">
+相泽消太
+</div>
+
+<div class="eng-name">
+Aizawa Shouta
+</div>
+
+<div class="description">
+
+这里写老师的介绍。<br>
+
+你以后可以自己修改文字。<br>
+
+也可以上传自己的图片替换。
+
+</div>
+
+</div>
+
+
+<!-- 你 -->
+
+<div class="profile-card">
+
+<img class="avatar"
+src="me.jpg">
+
+<div class="name">
+栗川千夏
+</div>
+
+<div class="eng-name">
+Kurikawa Chinatsu
+</div>
+
+<div class="description">
+
+这里写你的介绍。<br>
+
+比如喜欢的东西、性格、故事等等。<br>
+
+完全可以以后慢慢补充。
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- 导览 -->
+
+<section class="guide">
+
+<div class="guide-title">
+导览
+</div>
+
+<div class="guide-buttons">
+
+<a href="Photo.html">
+私有影像存档^ω^
+</a>
+
+<a href="story.html">
+UA问题生观察日志-_-
+</a>
+
+<a href="daily.html">
+24小时合理性怠情=⩌⩊⩌=  
+</a>
+
+</div>
+
+</section>
+
+</section>
 
 </body>
 </html>
