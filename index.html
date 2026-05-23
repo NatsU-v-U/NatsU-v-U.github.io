@@ -2,393 +2,294 @@
 <html lang="zh">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>和老师的小世界</title>
-
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-
-    background:
-    linear-gradient(
-    to bottom,
-    #fff7fa 0%,
-    #ffeef5 40%,
-    #fff9fb 100%
-    );
-
-    color:#5e4b52;
-
-    font-family:
-    "Songti SC",
-    "SimSun",
-    serif;
-
-    overflow-x:hidden;
-}
-
-
-/* 顶部区域 */
-
-.hero{
-
-    min-height:100vh;
-
-    display:flex;
-    flex-direction:column;
-
-    justify-content:center;
-    align-items:center;
-
-    text-align:center;
-
-    padding:40px;
-}
-
-
-/* 主标题 */
-
-.main-title{
-
-    font-size:48px;
-
-    letter-spacing:3px;
-
-    margin-bottom:18px;
-
-    color:#7d5a66;
-
-    animation:fadeUp 1.5s ease;
-}
-
-
-/* 英文副标题 */
-
-.sub-title{
-
-    font-size:20px;
-
-    font-style:italic;
-
-    color:#b28a97;
-
-    margin-bottom:60px;
-
-    letter-spacing:1px;
-
-    animation:fadeUp 2s ease;
-}
-
-
-/* 双人介绍卡 */
-
-.card-container{
-
-    width:100%;
-
-    max-width:1000px;
-
-    display:flex;
-
-    gap:40px;
-
-    justify-content:center;
-
-    flex-wrap:wrap;
-}
-
-
-/* 卡片 */
-
-.profile-card{
-
-    width:320px;
-
-    background:rgba(255,255,255,0.55);
-
-    border:1px solid rgba(255,255,255,0.8);
-
-    border-radius:30px;
-
-    padding:30px;
-
-    backdrop-filter:blur(10px);
-
-    box-shadow:
-    0 10px 30px rgba(0,0,0,0.06);
-
-    transition:0.4s;
-}
-
-.profile-card:hover{
-
-    transform:translateY(-8px);
-}
-
-
-/* 头像 */
-
-.avatar{
-
-    width:180px;
-    height:180px;
-
-    border-radius:50%;
-
-    object-fit:cover;
-
-    margin-bottom:25px;
-
-    border:5px solid rgba(255,255,255,0.8);
-}
-
-
-/* 名字 */
-
-.name{
-
-    font-size:34px;
-
-    margin-bottom:10px;
-
-    color:#6d515c;
-}
-
-
-/* 英文名 */
-
-.eng-name{
-
-    font-style:italic;
-
-    color:#b78d9b;
-
-    margin-bottom:25px;
-}
-
-
-/* 介绍 */
-
-.description{
-
-    line-height:2;
-
-    font-size:15px;
-
-    opacity:0.85;
-}
-
-
-/* 导览 */
-
-.guide{
-
-    margin-top:100px;
-
-    text-align:center;
-
-    padding-bottom:120px;
-}
-
-
-.guide-title{
-
-    font-size:36px;
-
-    margin-bottom:40px;
-
-    color:#7d5a66;
-}
-
-
-/* 导览按钮 */
-
-.guide-buttons{
-
-    display:flex;
-
-    justify-content:center;
-
-    flex-wrap:wrap;
-
-    gap:18px;
-}
-
-
-.guide-buttons a{
-
-    text-decoration:none;
-
-    color:#7d5a66;
-
-    background:white;
-
-    padding:14px 30px;
-
-    border-radius:999px;
-
-    transition:0.3s;
-
-    box-shadow:
-    0 5px 15px rgba(0,0,0,0.05);
-}
-
-
-.guide-buttons a:hover{
-
-    background:#f5dbe4;
-
-    transform:translateY(-3px);
-}
-
-
-/* 动画 */
-
-@keyframes fadeUp{
-
-    from{
-
-        opacity:0;
-        transform:translateY(30px);
-    }
-
-    to{
-
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-
-
-/* 手机适配 */
-
-@media(max-width:768px){
-
-    .main-title{
-
-        font-size:36px;
-    }
-
-    .profile-card{
-
-        width:90%;
-    }
-}
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>和老师的小世界</title>
+    
+    <!-- 引入适合梦向氛围的优雅英文花体字 (Great Vibes) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            /* 保持你喜欢的粉嫩渐变底色 */
+            background: linear-gradient(to bottom,
+                    #fff7fa 0%,
+                    #ffeef5 40%,
+                    #fff9fb 100%);
+            color: #5e4b52;
+            /* 全局中文字体采用典雅的宋体 */
+            font-family: "Times New Roman", "Songti SC", "STSong", "SimSun", serif;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* 顶部区域 */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        /* 主标题 */
+        .main-title {
+            font-size: 38px; /* 适当减小了桌面端字号，更有呼吸感 */
+            font-weight: 400;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+            color: #7d5a66;
+            animation: fadeUp 1.5s ease;
+        }
+
+        /* 英文副标题 */
+        .sub-title {
+            font-family: 'Great Vibes', cursive; /* 使用引入的英文花体 */
+            font-size: 32px; /* 花体字普遍偏小，所以调大字号更清晰 */
+            color: #b28a97;
+            margin-bottom: 60px;
+            letter-spacing: 1px;
+            animation: fadeUp 2s ease;
+        }
+
+        /* 双人介绍卡容器 */
+        .card-container {
+            width: 100%;
+            max-width: 1000px;
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 10px;
+        }
+
+        /* 卡片升级：增加淡淡的粉色半透明呼吸感 */
+        .profile-card {
+            width: 320px;
+            background: rgba(255, 255, 255, 0.65);
+            border: 1px solid rgba(245, 220, 228, 0.7);
+            border-radius: 24px;
+            padding: 35px 25px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(125, 90, 102, 0.05);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .profile-card:hover {
+            transform: translateY(-6px);
+            background: rgba(255, 255, 255, 0.85);
+            border-color: rgba(245, 220, 228, 1);
+            box-shadow: 0 15px 35px rgba(245, 220, 228, 0.4);
+        }
+
+        /* 头像 */
+        .avatar {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 25px;
+            border: 4px solid rgba(255, 255, 255, 0.9);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        /* 名字 */
+        .name {
+            font-size: 28px;
+            font-weight: 400;
+            margin-bottom: 6px;
+            color: #6d515c;
+        }
+
+        /* 英文名 */
+        .eng-name {
+            font-family: 'Great Vibes', cursive;
+            font-size: 22px;
+            color: #b78d9b;
+            margin-bottom: 25px;
+        }
+
+        /* 介绍 */
+        .description {
+            line-height: 1.8;
+            font-size: 14px;
+            color: #705b63;
+            opacity: 0.9;
+        }
+
+        /* 导览区域 */
+        .guide {
+            margin-top: 80px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .guide-title {
+            font-size: 28px;
+            font-weight: 400;
+            margin-bottom: 35px;
+            color: #7d5a66;
+            letter-spacing: 4px;
+        }
+
+        /* 导览按钮 */
+        .guide-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 0 20px;
+        }
+
+        .guide-buttons a {
+            text-decoration: none;
+            color: #7d5a66;
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(245, 220, 228, 0.5);
+            padding: 14px 28px;
+            border-radius: 999px;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(125, 90, 102, 0.04);
+        }
+
+        .guide-buttons a:hover {
+            background: #f5dbe4;
+            color: #52343e;
+            border-color: #f5dbe4;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(245, 220, 228, 0.6);
+        }
+
+        /* 动画 */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* 📱 手机端深度适配（专为苹果等手机屏幕优化） */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 40px 15px;
+            }
+
+            .main-title {
+                font-size: 22px; /* 调小字号，确保 iPhone 屏幕绝对不换行 */
+                white-space: nowrap; /* 强制单行显示 */
+                letter-spacing: 1px;
+                margin-bottom: 8px;
+            }
+
+            .sub-title {
+                font-size: 26px;
+                margin-bottom: 45px;
+            }
+
+            .card-container {
+                gap: 25px;
+            }
+
+            .profile-card {
+                width: 100%;
+                max-width: 300px; /* 让卡片在手机上更精致 */
+                padding: 25px 20px;
+            }
+
+            .avatar {
+                width: 140px;
+                height: 140px;
+                margin-bottom: 20px;
+            }
+
+            .guide {
+                margin-top: 60px;
+            }
+
+            .guide-buttons {
+                flex-direction: column; /* 手机上按钮垂直排列，防止挤压挤变形 */
+                align-items: center;
+                gap: 15px;
+            }
+
+            .guide-buttons a {
+                width: 85%;
+                max-width: 280px;
+                padding: 12px 20px;
+            }
+        }
+    </style>
 </head>
-
 
 <body>
 
-<section class="hero">
+    <section class="hero">
 
-<h1 class="main-title">
-- 欢迎来到和老师的小世界 -
-</h1>
+        <h1 class="main-title">
+            - 欢迎来到和老师的小世界 -
+        </h1>
 
-<div class="sub-title">
-Aizawa with Kurikawa :)
-</div>
+        <div class="sub-title">
+            Aizawa with Kurikawa :)
+        </div>
 
+        <!-- 双人介绍 -->
+        <div class="card-container">
 
-<!-- 双人介绍 -->
+            <!-- 老师 -->
+            <div class="profile-card">
+                <img class="avatar" src="aizawa.jpg" alt="相泽消太">
+                <div class="name">相泽消太</div>
+                <div class="eng-name">Aizawa Shouta</div>
+                <div class="description">
+                    这里写老师的介绍。<br>
+                    你以后可以自己修改文字。<br>
+                    也可以上传自己的图片替换。
+                </div>
+            </div>
 
-<div class="card-container">
+            <!-- 你 -->
+            <div class="profile-card">
+                <img class="avatar" src="me.jpg" alt="栗川千夏">
+                <div class="name">栗川千夏</div>
+                <div class="eng-name">Kurikawa Chinatsu</div>
+                <div class="description">
+                    这里写你的介绍。<br>
+                    比如喜欢的东西、性格、故事等等。<br>
+                    完全可以以后慢慢补充。
+                </div>
+            </div>
 
-<!-- 老师 -->
+        </div>
 
-<div class="profile-card">
+        <!-- 导览 -->
+        <section class="guide">
+            <div class="guide-title">导览</div>
+            <div class="guide-buttons">
+                <a href="Photo.html">私有影像存档^ω^</a>
+                <a href="story.html">UA问题生观察日志-_-</a>
+                <a href="daily.html">24小时合理性怠情=⩌⩊⩌=</a>
+            </div>
+        </section>
 
-<img class="avatar"
-src="aizawa.jpg">
-
-<div class="name">
-相泽消太
-</div>
-
-<div class="eng-name">
-Aizawa Shouta
-</div>
-
-<div class="description">
-
-这里写老师的介绍。<br>
-
-你以后可以自己修改文字。<br>
-
-也可以上传自己的图片替换。
-
-</div>
-
-</div>
-
-
-<!-- 你 -->
-
-<div class="profile-card">
-
-<img class="avatar"
-src="me.jpg">
-
-<div class="name">
-栗川千夏
-</div>
-
-<div class="eng-name">
-Kurikawa Chinatsu
-</div>
-
-<div class="description">
-
-这里写你的介绍。<br>
-
-比如喜欢的东西、性格、故事等等。<br>
-
-完全可以以后慢慢补充。
-
-</div>
-
-</div>
-
-</div>
-
-
-<!-- 导览 -->
-
-<section class="guide">
-
-<div class="guide-title">
-导览
-</div>
-
-<div class="guide-buttons">
-
-<a href="Photo.html">
-私有影像存档^ω^
-</a>
-
-<a href="story.html">
-UA问题生观察日志-_-
-</a>
-
-<a href="daily.html">
-24小时合理性怠情=⩌⩊⩌=  
-</a>
-
-</div>
-
-</section>
-
-</section>
+    </section>
 
 </body>
 </html>
